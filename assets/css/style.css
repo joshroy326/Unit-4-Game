@@ -1,0 +1,47 @@
+.header{
+    background-color: orange;
+    width: 280px;
+    height: 70px;
+}
+
+#Header{
+    position: relative;
+    top: 16px;
+    left: 14px;
+}
+
+.instructionsPost{
+    background-color: rgb(231, 198, 158);
+}
+
+.compChoiceNum{
+    background-color: rgb(14, 167, 14);
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+.winsAndLossesContainer{
+    
+    background-color: aqua;
+    height: 100px;
+    position: relative;
+    left: 270px;
+    width: 300px;
+    
+}
+
+.wins-losses-text{
+    position: relative;
+    right: 240px;
+    padding-top: 5px;
+}
+
+.titleHolder1{
+    background-color: turquoise;
+    width: 250px;
+}
+.user-value-holder{
+    background-color: turquoise;
+    width: 250px;
+    height: 150px;
+}
