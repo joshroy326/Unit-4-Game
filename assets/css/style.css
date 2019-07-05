@@ -21,20 +21,13 @@
     float: left;
 }
 .winsAndLossesContainer{
-    
     background-color: aqua;
-    height: 100px;
+    height: 170px;
     position: relative;
     left: 270px;
     width: 300px;
-    
 }
 
-.wins-losses-text{
-    position: relative;
-    right: 240px;
-    padding-top: 5px;
-}
 
 .titleHolder1{
     background-color: turquoise;
@@ -44,4 +37,11 @@
     background-color: turquoise;
     width: 250px;
     height: 150px;
+}
+#losses{
+    float: left;
+}
+#wins{
+    position: relative;
+    right: 250px;
 }
