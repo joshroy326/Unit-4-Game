@@ -9,6 +9,10 @@
         <title>Crystal Collector Game</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets\css\style.css">
         <script src="assets\javascript\game.js"></script>
     </head>
@@ -32,21 +36,20 @@
         </div>
 
         <div class="compChoiceNum">
-            <h1>randomnum</h1>
+            <h1 id="computerPick">???</h1>
         </div>
 
         
         <div class="winsAndLossesContainer">
-            <p class="wins-losses-text">Wins: </p>
-            <br>
-            <p class="wins-losses-text">Losses: </p>
+            <p class="wins-losses-text" id="wins"></p>
+            <p class="wins-losses-text" id="losses"></p>
         </div>
 
         <div class="GemImageContainer">
-            <img src="assets\images\blue gem.jpg" alt="">
-            <img src="assets\images\green gem.jpg" alt="">
-            <img src="assets\images\red gem.jpg" alt="">
-            <img src="assets\images\yellow gem.jpg" alt="">
+            <img src="assets\images\blue gem.jpg" alt="" class="button-gem-blue">
+            <img src="assets\images\green gem.jpg" alt="" class="button-gem-green">
+            <img src="assets\images\red gem.jpg" alt="" class="button-gem-red">
+            <img src="assets\images\yellow gem.jpg" alt="" class="button-gem-yellow">
         </div>
 
 
@@ -55,7 +58,7 @@
         </div>
 
         <div class="user-value-holder">
-            <h2>0</h2>
+            <h2 id="user-score">0</h2>
         </div>
 
         <script src="" async defer></script>
