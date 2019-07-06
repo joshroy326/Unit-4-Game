@@ -51,13 +51,13 @@ $(document).ready(function() {
 
     });
 
-    var crystalValue = ($(this).attr("data-crystalvalue"));
+    
 
 
 
     //create some logic here for when the user presses a button that it adds to the users score
 
-    if()
+    
 
     //loggin the wins and losses
     $("#wins").text("Wins: " + wins++);
