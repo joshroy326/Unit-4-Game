@@ -4,7 +4,7 @@ var compRandomNum = Math.floor(Math.random() * 100);
 //need variables for the wins and losses
 var wins = 0;
 var losses = 0;
-var userCounter = 0;
+
 
 //need to create onclick events and create variables for the buttons to store a value
 
@@ -22,35 +22,116 @@ $(document).ready(function() {
     var gemGreen = Math.floor(Math.random() * 12) + 1;
     var gemRed = Math.floor(Math.random() * 12) + 1;
     var gemYellow = Math.floor(Math.random() * 12) + 1;
+    var userScore = 0;
+    
     
     // creating on click events for each gem button
-
     
     //-------------------------------------------------------
     $(".button-gem-blue").on("click", function(blue) {
         console.log("blues button value is " + gemBlue);
         console.log("blue button has been clicked");
+        userScore = userScore + gemBlue;
+        // console.log(userScore)
+        $("#user-score").text(userScore);
+
+        if(userScore === compRandomNum) {
+            $("#wins").text("Wins: " + wins++);
+            alert("Congrats you have won!!!");
+            
+        }
+        else if(userScore > compRandomNum){
+            $("#losses").text("Losses: " + losses++);
+            alert("Oh no your not very smart please try again!");
+            restGame();
+        }
+        function restGame(){
+            var compRandomNum = Math.floor(Math.random() * 100);
+            alert("The computer has chosen another number lets see if you can win this time!");
+            userScore = 0;
+        }
 
     });
     //-------------------------------------------------------
     $(".button-gem-green").on("click", function(green) {
         console.log("greens button value is " + gemGreen);
         console.log("green button has been clicked");
+        userScore = userScore + gemGreen;
+        // console.log(userScore)
+        $("#user-score").text(userScore);
 
+        if(userScore === compRandomNum) {
+            $("#wins").text("Wins: " + wins++);
+            alert("Congrats you have won!!!");
+            
+        }
+        else if(userScore > compRandomNum){
+            $("#losses").text("Losses: " + losses++);
+            alert("Oh no your not very smart please try again!");
+            restGame();
+        }
+        
+        function restGame(){
+            var compRandomNum = Math.floor(Math.random() * 100);
+            alert("The computer has chosen another number lets see if you can win this time!");
+            userScore = 0;
+        }
     });  
     //-------------------------------------------------------
     $(".button-gem-red").on("click", function(red) {
         console.log("reds button value is " + gemRed);
         console.log("red button has been clicked");
-
+        userScore = userScore + gemRed;
+        // console.log(userScore)
+        $("#user-score").text(userScore);
+        
+        if(userScore === compRandomNum) {
+            $("#wins").text("Wins: " + wins++);
+            alert("Congrats you have won!!!");
+            
+        }
+        else if(userScore > compRandomNum){
+            $("#losses").text("Losses: " + losses++);
+            alert("Oh no your not very smart please try again!");
+            restGame();
+        }
+        function restGame(){
+            var compRandomNum = Math.floor(Math.random() * 100);
+            alert("The computer has chosen another number lets see if you can win this time!");
+            userScore = 0;
+        }
     });
     //-------------------------------------------------------
     $(".button-gem-yellow").on("click", function(yellow) {
         console.log("yellows button value is " + gemYellow);
         console.log("yellow button has been clicked");
+        userScore = userScore + gemYellow;
+        // console.log(userScore)
+        $("#user-score").text(userScore);
+       
 
+        if(userScore === compRandomNum) {
+            $("#wins").text("Wins: " + wins++);
+            alert("Congrats you have won!!!");
+            
+        }
+        else if(userScore > compRandomNum){
+            $("#losses").text("Losses: " + losses++);
+            alert("Oh no your not very smart please try again!");
+            restGame();
+        }
+
+        function restGame(){
+            var compRandomNum = Math.floor(Math.random() * 100);
+            alert("The computer has chosen another number lets see if you can win this time!");
+            userScore = 0;
+        }
+
+
+        
     });
 
+    
     
 
 
@@ -62,7 +143,7 @@ $(document).ready(function() {
     //loggin the wins and losses
     $("#wins").text("Wins: " + wins++);
     $("#losses").text("Losses: " + losses++);
-    $("user-score").text(losses++);
+    $("#user-score").text(userScore);
     
     
 
